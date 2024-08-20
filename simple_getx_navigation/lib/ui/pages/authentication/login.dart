@@ -25,43 +25,50 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Login Page (simple navigation with GetX)",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextField(
-                  controller: _textController,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Enter your user',
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Login Page (simple navigation with GetX)",
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                    onPressed: () {
-                      if (_textController.text.isEmpty) {
-                        Get.snackbar('Error', 'Value can not be empty',
-                            icon: Icon(Icons.alarm),
-                            backgroundColor: Colors.red);
-                      } else {
-                        final name = _textController.text;
-                        Get.off(() => HomePage(name: name));
-                      }
-                    },
-                    child: Text("Login")),
-                SizedBox(
-                  height: 20,
-                ),
-                TextButton(
-                    onPressed: () {
-                      Get.to(() => SignUpPage());
-                    },
-                    child: Text("Create user"))
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextField(
+                        controller: _textController,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Enter your user',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            if (_textController.text.isEmpty) {
+                              Get.snackbar('Error', 'Value can not be empty',
+                                  icon: Icon(Icons.alarm),
+                                  backgroundColor: Colors.red);
+                            } else {
+                              final name = _textController.text;
+                              Get.off(() => HomePage(name: name));
+                            }
+                          },
+                          child: Text("Login")),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Get.to(() => SignUpPage());
+                          },
+                          child: Text("Create user")),
+                    ],
+                  ),
+                )
               ],
             ),
           ),

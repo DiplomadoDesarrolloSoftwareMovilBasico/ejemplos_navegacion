@@ -15,8 +15,9 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Navigation',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.blue,
+      )),
       routes: {
         HOME_ROUTE: (context) => const HomePage(),
         LOGIN_ROUTE: (context) => const LoginScreen(),

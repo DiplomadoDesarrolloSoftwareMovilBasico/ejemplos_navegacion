@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     final nameArg = ModalRoute.of(context)!.settings.arguments;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Home"),
         actions: [
           IconButton(

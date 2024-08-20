@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
     String name = Get.arguments;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Home"),
         actions: [
           IconButton(

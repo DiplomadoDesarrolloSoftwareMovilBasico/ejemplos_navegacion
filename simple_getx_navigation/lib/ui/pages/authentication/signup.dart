@@ -16,18 +16,25 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "SignUp Page",
-                  style: Theme.of(context).textTheme.headline6,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "SignUp Page",
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                    onPressed: () {
-                      Get.back();
-                    },
-                    child: Text("SignUp")),
+                Expanded(
+                  child: Center(
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        child: Text("SignUp")),
+                  ),
+                ),
                 SizedBox(
                   height: 20,
                 ),

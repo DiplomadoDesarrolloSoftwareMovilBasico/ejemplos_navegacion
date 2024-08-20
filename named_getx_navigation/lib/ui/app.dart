@@ -15,8 +15,9 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Simple Flutter Navigation',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.blue,
+      )),
       initialRoute: LOGIN_ROUTE,
       getPages: [
         GetPage(name: LOGIN_ROUTE, page: () => LoginScreen()),
