@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="named_flutter_navigation"
+        android:label="flutter_navigation"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

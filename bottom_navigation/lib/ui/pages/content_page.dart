@@ -3,7 +3,7 @@ import 'package:botton_navigation/ui/widgets/profile_widget.dart';
 import 'package:flutter/material.dart';
 
 class ContentPage extends StatefulWidget {
-  const ContentPage({Key? key}) : super(key: key);
+  const ContentPage({super.key});
 
   @override
   State<ContentPage> createState() => _ContentPageState();

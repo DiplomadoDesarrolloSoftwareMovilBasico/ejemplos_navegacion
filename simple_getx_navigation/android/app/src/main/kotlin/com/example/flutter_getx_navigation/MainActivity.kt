@@ -1,4 +1,4 @@
-package com.example.bottom_navigation
+package com.example.flutter_getx_navigation
 
 import io.flutter.embedding.android.FlutterActivity
 
